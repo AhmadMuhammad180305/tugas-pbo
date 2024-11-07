@@ -1,0 +1,81 @@
+public class Main {
+    public static void main(String[] args) {
+        Muzaki mhs1 = new Muzaki(762826762, "Budi", 10000000);
+        double zakat = mhs1.getPenghasilan() * 0.025;
+        
+        Penerima penerima1 = new Penerima("Yayasan Yatim Piatu", zakat);
+        
+        System.out.println("NIM Muzaki: " + mhs1.getNIM());
+        System.out.println("Nama Muzaki: " + mhs1.getNama());
+        System.out.println("Jumlah Zakat: Rp " + zakat);
+        System.out.println("Nama Penerima: " + penerima1.getNama());
+        System.out.println("Jumlah Zakat yang Diterima: Rp " + penerima1.getJumlahZakat());
+    }
+}
+______________________________________________________________________________________________________________________
+public class Muzaki {
+    private int NIM;
+    private String nama;
+    private double penghasilan;
+    
+    // Konstruktor
+    public Muzaki(int NIM, String nama, double penghasilan) {
+        this.NIM = NIM;
+        this.nama = nama;
+        this.penghasilan = penghasilan;
+    }
+
+    // Setter dan Getter
+    public int getNIM() {
+        return NIM;
+    }
+
+    public void setNIM(int NIM) {
+        this.NIM = NIM;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public double getPenghasilan() {
+        return penghasilan;
+    }
+
+    public void setPenghasilan(double penghasilan) {
+        this.penghasilan = penghasilan;
+    }
+}
+___________________________________________________________________________________________________________
+
+public class Penerima {
+    private String nama;
+    private double jumlahZakat;
+
+    // Konstruktor
+    public Penerima(String nama, double jumlahZakat) {
+        this.nama = nama;
+        this.jumlahZakat = jumlahZakat;
+    }
+
+    // Setter dan Getter
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public double getJumlahZakat() {
+        return jumlahZakat;
+    }
+
+    public void setJumlahZakat(double jumlahZakat) {
+        this.jumlahZakat = jumlahZakat;
+    }
+}
